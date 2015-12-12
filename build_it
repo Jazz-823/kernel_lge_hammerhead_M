@@ -7,12 +7,6 @@ echo "checking for compiled kernel..."
 if [ -f arch/arm/boot/zImage-dtb ]
 then
 
-echo "generating device tree..."
-./dtbTool -o ../tools/dt.img -s 2048 -p ./scripts/dtc/ ./arch/arm/boot/
-
-### copy zImage
-cp arch/arm/boot/zImage-dtb ../tools/.
-
 echo "DONE"
 
 fi
